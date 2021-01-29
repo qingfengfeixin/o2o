@@ -1,0 +1,16 @@
+# This is a TOML document. Boom.
+
+
+SqlFile = "../file/script.sql"
+
+# 源数据库
+[sou]
+driver = "oracle"
+dsn = "oracle://noap:noap@192.168.39.88/db11g"
+
+# 目标数据库
+[dest]
+driver = "oracle"
+dsn = "oracle://cs:cs@192.168.39.88/db11g"
+
+
