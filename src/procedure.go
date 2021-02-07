@@ -1,7 +1,6 @@
 package main
 
 import (
-	"database/sql"
 	"fmt"
 )
 
@@ -11,7 +10,7 @@ type PROCEDURE struct {
 	text           string
 }
 
-func NewPro(db *sql.DB, Pro string) *PROCEDURE {
+func NewPro(db *DBModel, Pro string) *PROCEDURE {
 	return GetOraPro(db, Pro)
 }
 
@@ -22,7 +21,7 @@ func dropPro(pro string) (str string) {
 	return str
 }
 
-func createPros(db *sql.DB, pros []string) (str string) {
+func createPros(db *DBModel, pros []string) (str string) {
 
 	for _, v := range pros {
 		pro := NewPro(db, v)

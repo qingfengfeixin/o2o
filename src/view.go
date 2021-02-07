@@ -1,7 +1,6 @@
 package main
 
 import (
-	"database/sql"
 	"fmt"
 )
 
@@ -11,7 +10,7 @@ type VIEW struct {
 	TEXT        string
 }
 
-func NewView(db *sql.DB, view string) *VIEW {
+func NewView(db *DBModel, view string) *VIEW {
 	return GetOraView(db, view)
 }
 
@@ -22,7 +21,7 @@ func DropView(view string) (str string) {
 	return str
 }
 
-func createViews(db *sql.DB, views []string) (str string) {
+func createViews(db *DBModel, views []string) (str string) {
 
 	for _, v := range views {
 		vw := NewView(db, v)

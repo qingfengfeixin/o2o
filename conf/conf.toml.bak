@@ -6,13 +6,11 @@ SqlFile = "../file/script.sql"
 # 源数据库
 [sou]
 driver = "oracle"
-dsn = "oracle://cdma4:uwaysoft_2009@192.168.15.223/test10"
-
+dsn = "oracle://noap:noap@192.168.39.88/db11g"
 
 # 目标数据库
 [dest]
 driver = "oracle"
-dsn = "oracle://cdma4:uwaysoft_2009@192.168.15.223/test10"
-
+dsn = "oracle://cs:cs@192.168.39.88/db11g"
 
 

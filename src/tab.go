@@ -25,7 +25,7 @@ func DropTab(tab string) (str string) {
 	return str
 }
 
-func createTabs(db *sql.DB, tabs []string) {
+func createTabs(db *DBModel, tabs []string) {
 
 	for _, v := range tabs {
 		var str string
@@ -121,6 +121,6 @@ func (tab *TABLE) getindexddl() string {
 
 }
 
-func NewTab(db *sql.DB, tab string) *TABLE {
+func NewTab(db *DBModel ,tab string) *TABLE {
 	return GetOraTab(db, tab)
 }

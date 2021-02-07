@@ -19,8 +19,8 @@ type Config struct {
 }
 
 type dbstr struct {
-	Driver string
-	Dsn    string
+	Driver  string
+	Dsn     string
 }
 
 func init() {
